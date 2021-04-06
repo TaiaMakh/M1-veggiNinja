@@ -35,18 +35,20 @@ function createGameScreen() {
               <span class="label">Score:</span>
               <span class="value"></span>
             </div>
+
           <div class="lives">
             <span class="label">Lives:</span>
             <span class="value"></span>
           </div>
         </header>
+
         <div class="canvas-container">
           <canvas></canvas>
         </div>
       </main>`
   );
   mainDiv.appendChild(gameScreen);
-  return gameScreen; //????
+  return gameScreen;
 }
 
 function removeGameScreen(){
@@ -77,15 +79,16 @@ function startGame(){
         removeGameOverScreen();
     }
     createGameScreen();
-    // game = new Game(gameScreen);
-    // game.start();
+      game = new Game(gameScreen);
+      game.start();
 }
 function endGame(score){
     removeGameScreen();
     createGameOverScreen(score);
 }
-function mouseEspada(){
-    document.documentElement.style.cursor = "url(./images/fruit-cutter-game-kit/PNG/slash-effects/faca-diagonal-2.png)"
-}
+
+// function mouseEspada(){
+//     document.documentElement.style.cursor = "url(./images/fruit-cutter-game-kit/PNG/slash-effects/faca-diagonal-2.png)"
+//}
 // window.addEventListener('load', mouseEspada)
 window.addEventListener('load', createSplashScreen)

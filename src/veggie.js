@@ -1,5 +1,3 @@
-const orangeImg = document.createElement('img');
-orangeImg.src = `../images/fruit-cutter-game-kit/PNG/fruits/elementos-06.png`
 
 class Veggie {
   constructor(canvas, positionX, speed) {
@@ -8,21 +6,27 @@ class Veggie {
 
     this.x = positionX;
     this.y = 0;
-    this.size = 20;
+    this.size = 50;
 
     this.speed = speed;
   }
-    draw() {
-        //fill style img
-        this.ctx.drawImage(orangeImg, this.x, this.y, this.size, this.size );
-    }
+  draw() {
+    const orangeImg = document.createElement('img');
+    orangeImg.src = '../images/fruit-cutter-game-kit/PNG/fruits/elementos-06.png'
+    /*orangeImg.onload = () => */
+    this.ctx.drawImage(orangeImg, this.x, this.y, this.size, this.size);
 
-    updatePosition(){
-        this.y += this.speed;
-    }
+  }
+  updatePosition(){
+      this.y += this.speed;
+  }
 
-    isInsideScreen(){
+  isInsideScreen(){
+    const veggieTop = this.y;
+    const screenBottom = this.canvas.height;
+    const isInside = veggieTop < screenBottom;
 
-
-    }
+    return isInside;
+  }
 }
+

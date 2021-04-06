@@ -58,6 +58,40 @@ body{
     border: none;
     
 }
-body{
+/* body{
     cursor: url("./images/fruit-cutter-game-kit/PNG/slash-effects/faca-diagonal-2.png"), auto;
-}
+} */
+.game {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .game header {
+    height: 50px;
+    display: flex;
+    align-items:center;
+    font-size: 1.5em;
+    margin-top: 25px;
+  }
+  
+  .game .lives {
+    flex: 1;
+  }
+  
+  .game .score {
+    flex: 1;
+  }
+  
+  .game .label {
+    font-weight: bold;
+  }
+  
+  .game .value {
+    font-style: italic;
+  }
+  
+  .game .canvas-container {
+    flex: 1;
+  }

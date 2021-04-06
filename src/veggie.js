@@ -6,9 +6,11 @@ class Veggie {
 
     this.x = positionX;
     this.y = 0;
-    this.size = 50;
+    this.size = 80;
 
     this.speed = speed;
+
+    this.eliminate = false;
   }
   draw() {
     const orangeImg = document.createElement('img');

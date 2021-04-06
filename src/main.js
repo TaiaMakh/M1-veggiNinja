@@ -57,11 +57,11 @@ function removeGameScreen(){
 
 function createGameOverScreen(score) {
   gameOverScreen = buildDom(
-    `<main>
+    `<main class="game-over">
         <h1>GAME OVER</h1>
         <p>Your score: <span>${score}</span> </p>
         <span>Slice to restart!</span>
-        <button></button>
+        <div class= "div-btn-start"><button class ="btn-start"></button></div>
     </main>`
 );
   const button = gameOverScreen.querySelector("button");

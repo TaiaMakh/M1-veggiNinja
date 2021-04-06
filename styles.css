@@ -39,7 +39,6 @@ body{
     font-size: 2.6em;
     text-align: center;
     margin-top: 12%;
-    cursor:url(./images/fruit-cutter-game-kit/faca-diagonal-1.png), auto;
 }
 
 .div-btn-start{
@@ -48,7 +47,7 @@ body{
     justify-content: center;
 
 }
-.splash-container button.btn-start{
+.btn-start{
     background-image: url("./images/fruit-cutter-game-kit/PNG/fruits/elementos-06.png");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -56,11 +55,9 @@ body{
     height: 150px;
     background-color: transparent;
     border: none;
+    margin-top: 30px;
     
 }
-/* body{
-    cursor: url("./images/fruit-cutter-game-kit/PNG/slash-effects/faca-diagonal-2.png"), auto;
-} */
 .game {
     text-align: center;
     display: flex;
@@ -94,4 +91,14 @@ body{
   
   .game .canvas-container {
     flex: 1;
+  }
+  .game-over{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 2em;
+      margin-top: 70px;
+  }
+  .game-over h1{
+      font-size: 2em;
   }

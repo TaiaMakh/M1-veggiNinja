@@ -1,4 +1,4 @@
-let probability = 0.95;
+let probability = 0.97;
 
 class Game {
   constructor(gameScreen) {
@@ -15,6 +15,7 @@ class Game {
   start() {
     this.livesElement = this.gameScreen.querySelector(".lives .value");
     this.scoreElement = this.gameScreen.querySelector(".score .value");
+    
 
     this.canvas = this.gameScreen.querySelector("canvas");
     this.ctx = this.canvas.getContext("2d");
@@ -40,7 +41,7 @@ class Game {
   startLoop() {
     const loop = () => {
       if (this.veggies.length < 4) {
-        if (Math.random() > 0.47) {
+        if (Math.random() > probability) {
           const randomX = Math.floor((this.canvas.width - 20) * Math.random());
           const newVeggie = new Veggie(this.canvas, randomX, 5);
           this.veggies.push(newVeggie);
@@ -50,6 +51,8 @@ class Game {
 
       this.veggies = this.veggies.filter((veggie) => {
         veggie.updatePosition();
+        this.removeTotalLives();
+
         return veggie.isInsideScreen();
       });
 
@@ -69,17 +72,26 @@ class Game {
     this.veggies.forEach((veggie) => {
       if (this.player.didCollide(veggie)) {
         this.score += 1;
+        veggie.eliminate = true;
         console.log("the score is", this.score);
-        // this.score.innerHtml = this.score;
-        //temporary fruit disappears out of canvas
-        veggie.y = this.canvas.width + veggie.size;
-      } else {
-           this.player.removeLives();
-           console.log();
-    //     if (this.player.lives === 0) {
-    //       this.gameOver();
-    //     }
-       }
+        //this.score.innerHtml = this.score;
+        //fruit disappears out of canvas
+        veggie.y = this.canvas.width;
+      }
+    });
+  }
+  //ajustar coordenadas x y y para remover los
+  removeTotalLives() {
+    this.veggies.forEach((veggie) => {
+    if(veggie.eliminate === false){
+        if (!veggie.isInsideScreen()) {
+            this.player.removeLives();
+            console.log("one live less", this.player.lives);
+            if (this.player.lives === 0) {
+              this.gameOver();
+            }
+          }
+    }    
     });
   }
 
@@ -88,6 +100,7 @@ class Game {
     endGame(this.score);
   }
   updateGameStatus() {
-    this.livesElement.innerHtml = this.player.lives;
+    this.scoreElement.innerHTML = this.score;
+    this.livesElement.innerHTML = this.player.lives;
   }
 }

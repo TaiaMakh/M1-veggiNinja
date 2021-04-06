@@ -13,10 +13,10 @@ class Player{
     }
     removeLives(){
         this.lives -= 1;
+        console.log(this.lives)
     }
 
     didCollide(veggie){
-        console.log(this.x, this.y)
         const veggieTop = veggie.y;
         const veggieBottom = veggie.y + veggie.size;
         const veggieRight = veggie.x + veggie.size;

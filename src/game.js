@@ -11,7 +11,6 @@ class Game {
     this.livesElement = undefined;
     this.scoreElement = undefined;
     this.gameIsOver = false;
-    this.veggiesSliced = [];
   }
   start() {
     this.livesElement = this.gameScreen.querySelector(".lives .value");
@@ -79,23 +78,21 @@ class Game {
   checkCollisions() {
     this.veggies.forEach((veggie) => {
       if (this.player.didCollide(veggie)) { 
-        this.score += 1;
+        if (!veggie.eliminate)this.score += 1;
         veggie.eliminate = true;
-        this.veggiesSliced.push(veggie);
-        console.log('array sliced veggies', this.veggiesSliced.length)
-        veggie.y = this.canvas.height; 
+        //veggie.y = this.canvas.height; 
         //function draws 2 images
       }
     });
   }
 
-  slicedVeggies(){
-    this.veggiesSliced = this.veggiesSliced.filter((veggieSliced) => {
-      veggieSliced.updatePosition();
-      veggieSliced.drawSliced();
-      return veggiesSliced.isInsideScreen
-    })
-  }
+  // slicedVeggies(){
+  //   this.veggiesSliced = this.veggiesSliced.filter((veggieSliced) => {
+  //     veggieSliced.updatePosition();
+  //     veggieSliced.drawSliced();
+  //     return veggiesSliced.isInsideScreen
+  //   })
+  // }
 
   gameOver() {
     this.gameIsOver = true;

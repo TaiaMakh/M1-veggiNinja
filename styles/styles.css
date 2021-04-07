@@ -31,6 +31,7 @@ body {
 }
 .main-div.scen-two{
   background-image: url("../images/fruit-cutter-game-kit/PNG/backgrounds/cenario2.png");
+  width: 100%;
 }
 .container {
   margin: 0;

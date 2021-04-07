@@ -91,7 +91,9 @@ class Game {
 
   slicedVeggies(){
     this.veggiesSliced = this.veggiesSliced.filter((veggieSliced) => {
-      veggie.updatePosition();
+      veggieSliced.updatePosition();
+      veggieSliced.drawSliced();
+      return veggiesSliced.isInsideScreen
     })
   }
 

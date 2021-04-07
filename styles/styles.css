@@ -9,7 +9,7 @@ html {
   }
 @font-face {
     font-family: Gang of Three;
-    src: url("/fonts/go3v2\ 2.ttf");
+    src: url("../fonts/go3v2\ 2.ttf");
 }
 body{
     margin: 0;
@@ -18,7 +18,7 @@ body{
     color:white;
 }
 .main-div{
-    background-image: url("../images/fruit-cutter-game-kit/PNG/backgrounds/cenario1.png");
+    background-image: url("/images/fruit-cutter-game-kit/PNG/backgrounds/cenario1.png");
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,7 +48,7 @@ body{
 
 }
 .btn-start{
-    background-image: url("../images/fruit-cutter-game-kit/PNG/fruits/entireFruits/entire2.png");
+    background-image: url("/images/fruit-cutter-game-kit/PNG/fruits/entireFruits/entire2.png");
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100px;

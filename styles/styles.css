@@ -18,7 +18,6 @@ body {
   color: white;
 }
 .main-div {
-  background-image: url("../images/fruit-cutter-game-kit/PNG/backgrounds/cenario1.png");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,6 +25,12 @@ body {
   position: relative;
   margin: 0;
   border-top: 1px solid transparent;
+}
+.main-div.scen-one{
+  background-image: url("../images/fruit-cutter-game-kit/PNG/backgrounds/cenario1.png");
+}
+.main-div.scen-two{
+  background-image: url("../images/fruit-cutter-game-kit/PNG/backgrounds/cenario2.png");
 }
 .container {
   margin: 0;

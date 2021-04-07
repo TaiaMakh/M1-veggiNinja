@@ -92,3 +92,11 @@ function endGame(score){
 //}
 // window.addEventListener('load', mouseEspada)
 window.addEventListener('load', createSplashScreen)
+
+const changeButton = document.querySelector(".change-btn");
+
+changeButton.addEventListener('click', () =>{
+  console.log('He clicat')
+  mainDiv.classList.toggle("scen-one");
+  mainDiv.classList.toggle("scen-two");
+})

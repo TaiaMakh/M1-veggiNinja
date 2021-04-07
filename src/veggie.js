@@ -14,13 +14,14 @@ class Veggie {
     this.eliminate = false;
   }
   draw() {
-    const orangeImg = document.createElement('img');
-    orangeImg.src = `../images/fruit-cutter-game-kit/PNG/fruits/entireFruits/entire${this.fruit}.png`
-    /*orangeImg.onload = () => */
-    this.ctx.drawImage(orangeImg, this.x, this.y, this.size, this.size);
-
-    //cuando draw image partida src = .. ${this.fruit}
-
+    const entireImg = document.createElement('img');
+    entireImg.src = `images/fruit-cutter-game-kit/PNG/fruits/entireFruits/entire${this.fruit}.png`
+    this.ctx.drawImage(entireImg, this.x, this.y, this.size, this.size);
+  }
+  drawSliced(){
+    const slicedImg = document.createElement('img');
+    slicedImg.src = `../images/fruit-cutter-game-kit/PNG/fruits/slicedFruits/sliced${this.fruit}.png`
+    this.ctx.drawImage(slicedImg, this.x, this.y, this.size, this.size);
   }
   updatePosition(){
       this.y += this.speed;

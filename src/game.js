@@ -11,6 +11,7 @@ class Game {
     this.livesElement = undefined;
     this.scoreElement = undefined;
     this.gameIsOver = false;
+    this.veggiesSliced = [];
   }
   start() {
     this.livesElement = this.gameScreen.querySelector(".lives .value");
@@ -67,6 +68,7 @@ class Game {
       this.veggies.forEach((veggie) => {
         veggie.draw();
       });
+
       if (!this.gameIsOver) {
         window.requestAnimationFrame(loop);
       }
@@ -76,15 +78,21 @@ class Game {
   }
   checkCollisions() {
     this.veggies.forEach((veggie) => {
-      if (this.player.didCollide(veggie)) {
+      if (this.player.didCollide(veggie)) { 
         this.score += 1;
         veggie.eliminate = true;
-        console.log("the score is", this.score);
-         
-        //fruit disappears out of canvas
-        veggie.y = this.canvas.width; //ELIMINAR DEL ARRAY DE VEGGIES
+        this.veggiesSliced.push(veggie);
+        console.log('array sliced veggies', this.veggiesSliced.length)
+        veggie.y = this.canvas.height; 
+        //function draws 2 images
       }
     });
+  }
+
+  slicedVeggies(){
+    this.veggiesSliced = this.veggiesSliced.filter((veggieSliced) => {
+      veggie.updatePosition();
+    })
   }
 
   gameOver() {

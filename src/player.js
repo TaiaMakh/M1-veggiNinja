@@ -12,8 +12,7 @@ class Player{
 
     }
     removeLives(){
-        this.lives -= 1;
-        console.log(this.lives)
+        this.lives = this.lives - 1;
     }
 
     didCollide(veggie){

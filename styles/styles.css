@@ -61,6 +61,7 @@ body {
   background-color: transparent;
   border: none;
   margin-top: 30px;
+  outline: none;
 }
 .game {
   text-align: center;
@@ -107,7 +108,7 @@ body {
   font-size: 2em;
 }
 .change-btn{
-display:inline-block;
+/* display:inline-block; */
 padding: 0.35em 1.2em;
 border:0.1em solid #FFFFFF;
 margin:0 0.3em 0.3em 0;
@@ -118,4 +119,12 @@ font-weight:300;
 text-align:center;
 transition: all 0.2s;
 box-sizing: border-box;
-  }
+}
+
+.div-change-btn{
+  display:flex;
+  flex-direction: row-reverse;
+  margin-top: 15px;
+  
+  width: 100%;
+}

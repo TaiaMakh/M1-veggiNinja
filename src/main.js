@@ -20,7 +20,7 @@ function createSplashScreen() {
   mainDiv.appendChild(splashScreen);
   const startBtn = splashScreen.querySelector("button");
 
-  startBtn.addEventListener("mouseover", startGame);
+  startBtn.addEventListener("click", startGame);
 }
 
 function removeSplashScreen() {

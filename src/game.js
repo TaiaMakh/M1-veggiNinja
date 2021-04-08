@@ -11,6 +11,9 @@ class Game {
     this.livesElement = undefined;
     this.scoreElement = undefined;
     this.gameIsOver = false;
+    this.sound = new Sounds();
+    this.collideX = null;
+    this.collideY = null;
   }
   start() {
     this.livesElement = this.gameScreen.querySelector(".lives .value");
@@ -26,6 +29,7 @@ class Game {
     this.canvas.setAttribute("height", this.containerHeight);
 
     this.player = new Player(this.canvas, 5);
+    
 
     function handleMouseOver(event) {
       this.player.x = event.clientX;
@@ -66,6 +70,9 @@ class Game {
 
       this.veggies.forEach((veggie) => {
         veggie.draw();
+        if(veggie.eliminate){
+          veggie.drawSplash(this.collideX, this.collideY);
+        }
       });
 
       if (!this.gameIsOver) {
@@ -78,21 +85,16 @@ class Game {
   checkCollisions() {
     this.veggies.forEach((veggie) => {
       if (this.player.didCollide(veggie)) { 
+        this.sound.playCut();
+
+        this.collideX = veggie.x;
+        this.collideY = veggie.y;
+        
         if (!veggie.eliminate)this.score += 1;
         veggie.eliminate = true;
-        //veggie.y = this.canvas.height; 
-        //function draws 2 images
       }
     });
   }
-
-  // slicedVeggies(){
-  //   this.veggiesSliced = this.veggiesSliced.filter((veggieSliced) => {
-  //     veggieSliced.updatePosition();
-  //     veggieSliced.drawSliced();
-  //     return veggiesSliced.isInsideScreen
-  //   })
-  // }
 
   gameOver() {
     this.gameIsOver = true;

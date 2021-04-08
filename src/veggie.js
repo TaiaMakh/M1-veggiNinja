@@ -21,7 +21,7 @@ class Veggie {
       this.ctx.drawImage(entireImg, this.x, this.y, this.size, this.size);
     }else{
       const slicedImg = document.createElement('img');
-      slicedImg.src = `../images/fruit-cutter-game-kit/PNG/fruits/slicedFruits/sliced${this.fruit}.png`
+      slicedImg.src = `images/fruit-cutter-game-kit/PNG/fruits/slicedFruits/sliced${this.fruit}.png`
     
       let quadratic = Math.sqrt(this.y/0.05)
       this.ctx.drawImage(slicedImg, 60+this.x-quadratic, this.y, this.size, this.size);

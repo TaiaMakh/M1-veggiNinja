@@ -2,6 +2,7 @@ let splashScreen;
 let gameScreen;
 let gameOverScreen;
 const mainDiv = document.querySelector(".main-div");
+const changeButton = document.querySelector(".change-btn");
 
 function buildDom(htmlString) {
   const tempDiv = document.createElement("div");
@@ -93,9 +94,12 @@ function endGame(score){
 // window.addEventListener('load', mouseEspada)
 window.addEventListener('load', createSplashScreen)
 
-const changeButton = document.querySelector(".change-btn");
+
 
 changeButton.addEventListener('click', () =>{
   mainDiv.classList.toggle("scen-one");
   mainDiv.classList.toggle("scen-two");
+  changeButton.classList.toggle("btn-one");
+  changeButton.classList.toggle("btn-two")
+
 })

@@ -1,6 +1,6 @@
 class Sounds{
     constructor(){
-        this.cut = new Audio('/sounds/cut-sound.mp3');
+        this.cut = new Audio('sounds/cut-sound.mp3');
     }
     playCut(){
         this.cut.currentTime = 0;

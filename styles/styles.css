@@ -31,7 +31,7 @@ body {
 }
 .main-div.scen-two{
   background-image: url("../images/fruit-cutter-game-kit/PNG/backgrounds/cenario2.jpg");
-  
+  color:black
 }
 .container {
   margin: 0;
@@ -40,17 +40,20 @@ body {
   font-size: 5em;
   margin-left: 50px;
   transform: rotate(-10deg);
+  width: 600px;
+  margin-top: 0;
 }
 .splash-container span h2 {
   font-size: 2.6em;
   text-align: center;
-  margin-top: 12%;
+  margin-top: 20px;
 }
 
 .div-btn-start {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0;
 }
 .btn-start {
   background-image: url("../images/fruit-cutter-game-kit/PNG/fruits/entireFruits/entire2.png");
@@ -60,7 +63,7 @@ body {
   height: 150px;
   background-color: transparent;
   border: none;
-  margin-top: 30px;
+  margin-top: 20px;
   outline: none;
 }
 .game {
@@ -75,7 +78,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 1.5em;
-  margin-top: 25px;
+  margin-top: 0;
 }
 
 .game .lives {
@@ -102,29 +105,39 @@ body {
   flex-direction: column;
   text-align: center;
   font-size: 2em;
-  margin-top: 70px;
+  margin-top: 20px;
 }
 .game-over h1 {
   font-size: 2em;
 }
 .change-btn{
-/* display:inline-block; */
-padding: 0.35em 1.2em;
-border:0.1em solid #FFFFFF;
+display:inline-block;
+padding: 0.5em 1.7em;
 margin:0 0.3em 0.3em 0;
-border-radius:0.12em;
-text-decoration:none;
+border-radius:0.5em;
 font-family: Gang of Three;
-font-weight:300;
+font-weight:600;
 text-align:center;
 transition: all 0.2s;
 box-sizing: border-box;
+color: white;
+font-size: 1.1em;
+outline: none;
 }
 
 .div-change-btn{
   display:flex;
-  flex-direction: row-reverse;
-  margin-top: 15px;
-  
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 20px 30px 0 0;
+  margin-top: 5px;
   width: 100%;
+}
+
+.change-btn.btn-two{
+  background-image: url('../images/fruit-cutter-game-kit/PNG/backgrounds/cenario1.png');
+}
+.change-btn.btn-one{
+  background-image: url('../images/fruit-cutter-game-kit/PNG/backgrounds/cenario2.jpg');
+  color:black;
 }

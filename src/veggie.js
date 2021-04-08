@@ -5,7 +5,7 @@ class Veggie {
 
     this.x = positionX;
     this.y = 0;
-    this.size = 80;
+    this.size = 90;
 
     this.speed = speed;
     this.fruit = fruit;
@@ -28,14 +28,14 @@ class Veggie {
       let quadratic = Math.sqrt(this.y / 0.05);
       this.ctx.drawImage(
         slicedImg,
-        60 + this.x - quadratic,
+        70 + this.x - quadratic,
         this.y,
         this.size,
         this.size
       );
       this.ctx.drawImage(
         entireImg,
-        -60 + this.x + quadratic,
+        -70 + this.x + quadratic,
         this.y,
         this.size,
         this.size
@@ -52,9 +52,7 @@ class Veggie {
         this.size + 5,
         this.size + 5
       );
-    //   splashImg.setTimeout(() => {
-    //     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    //   }, 6000);
+
   }
 
   updatePosition() {

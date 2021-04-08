@@ -1,4 +1,4 @@
-let probability = 0.97;
+let probability = 0.98;
 
 class Game {
   constructor(gameScreen) {
@@ -44,11 +44,11 @@ class Game {
 
   startLoop() {
     const loop = () => {
-      if (this.veggies.length < 4) {
+      if (this.veggies.length < 3) {
         if (Math.random() > probability) {
           const randomX = Math.floor((this.canvas.width - 100) * Math.random());
           const randomFruit = Math.floor(Math.random()*13 + 1);
-          const newVeggie = new Veggie(this.canvas, randomX, 5, randomFruit);
+          const newVeggie = new Veggie(this.canvas, randomX, 3.5, randomFruit);
           this.veggies.push(newVeggie);
         }
       }
@@ -62,7 +62,6 @@ class Game {
             this.gameOver();
           }
         }
-        
         return veggie.isInsideScreen();
       });
 

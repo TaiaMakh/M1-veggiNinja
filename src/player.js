@@ -23,7 +23,6 @@ class Player{
 
         if (this.x > veggieLeft && this.x < veggieRight 
         && this.y > veggieTop && this.y < veggieBottom){
-            console.log('yuhu');
             return true;
         }else{
             return false;

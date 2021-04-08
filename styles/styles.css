@@ -30,8 +30,8 @@ body {
   background-image: url("../images/fruit-cutter-game-kit/PNG/backgrounds/cenario1.png");
 }
 .main-div.scen-two{
-  background-image: url("../images/fruit-cutter-game-kit/PNG/backgrounds/cenario2.png");
-  width: 100%;
+  background-image: url("../images/fruit-cutter-game-kit/PNG/backgrounds/cenario2.jpg");
+  
 }
 .container {
   margin: 0;
@@ -106,3 +106,16 @@ body {
 .game-over h1 {
   font-size: 2em;
 }
+.change-btn{
+display:inline-block;
+padding: 0.35em 1.2em;
+border:0.1em solid #FFFFFF;
+margin:0 0.3em 0.3em 0;
+border-radius:0.12em;
+text-decoration:none;
+font-family: Gang of Three;
+font-weight:300;
+text-align:center;
+transition: all 0.2s;
+box-sizing: border-box;
+  }

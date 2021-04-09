@@ -10,10 +10,9 @@ This is a game where player can touch the elements falling down the screen, with
 
 ## Backlog
 
-* Listening for mouse movement
-* Once spliced the elements each side falls down with a parabolic movement.
-* Introduce sound effect when elements are sliced.
+* Create Meat class with veggie properties but in collision ends the game.
 * Introduce a graffic effect in movement swor when elements are sliced.
+* Make more veggies appear from down of the screen with speed effect
 * Responsive mobile design
 
 
@@ -22,54 +21,50 @@ This is a game where player can touch the elements falling down the screen, with
 ### main.js
 
 ```
-createSplashScreen(){
-    .addEventListener("mouseover", startGame);
-}
-startGame(){
+createSplashScreen()
 
-}
-endGame(){
+removeSplashScreen()
 
-}
+createGameScreen()
 
-createGameScreen(){
-}
+removeGameScreen()
 
-createGameOverScreen(){
-}
+createGameOverScreen()
+
+startGame()
+
+endGame()
 ```
 ### game.js
 ```
 class Game{
-    atributes: live, score
+    start()
+    startLoop()
+    checkCollisions()
+    gameOver()
+    updateGameStatus()
 }
-function handleMouseOver(event){
-    addEventListener('mouseover')
-
-} //colisión entre mouse y veggie
 ```
 ### veggie.js
 ```
 class Veggie{
-    atributes: position x, position y
-}
-draw(){
-}
-updatePosition(){
-    y++ //from top to bottom of the canvas
-}
-isInsideScreen(){
-    //to check later eliminate veggies outside the canvas
-}
+    draw()
+    drawSplash()
+    updatePosition(){
+    isInsideScreen()
 ```
 ### player.js
 ```
-class Player{
-    atributes: live, score;
-}
-removeLives
-.addEventListener(load, style.cursor) //Change img of coursor once page is loaded
+class Player
+    removeLives()
+    didCollide()
 ```
+### sounds.js
+```
+class Sounds
+    playCut()
+```
+
 
 ## States y States Transitions
 Definition of the different states and their transition (transition functions)
@@ -77,26 +72,6 @@ Definition of the different states and their transition (transition functions)
 - splashScreen
 - gameScreen
 - gameoverScreen
-
-
-## Task
-Task definition in order of priority
-
-* Create splash screen
-* Create class Player (parameters, life and score)
-* Create class Fruit (parameters)
-* Create collision (mouse movement vs fruit)
-* Create collision (fruit vs screen)
-* Create remove splash screen
-* Update Fruit position
-* Handle screen collision
-* Update game status
-* Record score
-
-game -> eventlistenner click -> +score -> modify img
-remove event listener
-
-
 
 
 ## Links
@@ -108,8 +83,8 @@ remove event listener
 
 ### Git
 URls for the project repo and deploy
-[Link Repo](http://github.com)
-[Link Deploy](http://github.com)
+[Link Repo](https://github.com/TaiaMakh/M1-veggiNinja)
+[Link Deploy](https://taiamakh.github.io/M1-veggiNinja/)
 
 
 ### Slides

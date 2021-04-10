@@ -41,7 +41,7 @@ body {
   margin-left: 50px;
   transform: rotate(-10deg);
   width: 600px;
-  margin-top: 0;
+  margin-top: 100px;
 }
 .splash-container span h2 {
   font-size: 2.6em;
@@ -78,7 +78,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 1.5em;
-  margin-top: 0;
+  margin-top: 5px;
 }
 
 .game .lives {
@@ -132,6 +132,7 @@ outline: none;
   padding: 20px 30px 0 0;
   margin-top: 5px;
   width: 100%;
+  position: absolute;
 }
 
 .change-btn.btn-two{

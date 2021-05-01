@@ -1,10 +1,4 @@
-[!start game](https://res.cloudinary.com/dltwds8yr/image/upload/v1619905733/Screenshot_2021-05-01_at_23.35.47_bgyg0b.png)
-[!game](https://res.cloudinary.com/dltwds8yr/image/upload/v1619907162/Screenshot_2021-05-02_at_00.12.19_fhsbyq.png)
-[!game](https://res.cloudinary.com/dltwds8yr/image/upload/v1619907162/Screenshot_2021-05-02_at_00.12.02_ejo3wk.png)
-
 # veggieNinja
-
-![alt text](http://url/to/img.png)
 
 ## Description
 veggieNinja is a simple game where the player have to slice vegetables falling down trougth the screen. Player should use a mini-sword, controlling it with its mouse, to slice the vegetables in two pieces. As the game progresses, more vegetables are falling down the screen and as more the player slices the score increments. The game ends when vegetables not sliced touches the end of the screen or a piece of meat is sliced.
